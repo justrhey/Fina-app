@@ -1,0 +1,11 @@
+[versions]
+agp = "8.1.2"  # Android Gradle Plugin
+room = "2.6.1"  # Room Database
+
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.6.1" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

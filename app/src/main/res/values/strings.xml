@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fina</string>
+    <string name="remaining_budget">Remaining_Budget</string>
+    <string name="Recent_Transactions" />
+    <string name="add_Expense">Add Expense</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="_0_00">Total Expenses: ₱0.00</string>
+    <string name="add_expense">Add expense</string>
+    <string name="add_income">Add Income</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="fina">Fina</string>
+
+</resources>
