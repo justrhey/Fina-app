@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.fina">   <!-- ✅ add this line -->
-
-    <application
-            android:dataExtractionRules="@xml/data_extraction_rules"
-=======
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.example.fina">
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
->>>>>>> origin/main
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,11 +14,7 @@
         android:theme="@style/Theme.Fina">
 
         <activity
-<<<<<<< HEAD
             android:name="com.example.fina.main_function.MainActivity"
-=======
-            android:name="com.example.fina.MainActivity"
->>>>>>> origin/main
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
