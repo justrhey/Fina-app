@@ -3,11 +3,19 @@ plugins {
 }
 
 android {
+<<<<<<< HEAD
     namespace = "com.example.fina"
     compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.fina"
+=======
+    namespace = "com.example.myapp"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.example.myapp"
+>>>>>>> origin/main
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -32,10 +40,13 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
     implementation ("androidx.room:room-runtime:2.6.1")
     implementation(libs.firebase.database)
     annotationProcessor ("androidx.room:room-compiler:2.6.1")
     implementation("com.google.android.material:material:1.9.0")
+=======
+>>>>>>> origin/main
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -44,5 +55,8 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+<<<<<<< HEAD
     implementation("androidx.recyclerview:recyclerview:1.3.0")
+=======
+>>>>>>> origin/main
 }
