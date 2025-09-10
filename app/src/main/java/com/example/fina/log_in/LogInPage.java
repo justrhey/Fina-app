@@ -53,6 +53,9 @@ public class LogInPage extends AppCompatActivity {
     private UserCredentials validUser;
     private EditText editTextEmail, editTextPassword;
     private Button buttonLogin;
+    private int loginAttempts = 0;
+    private static final int MAX_ATTEMPTS = 5;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +94,31 @@ public class LogInPage extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
+    private void attemptLogin() {
+        String enteredEmail = editTextEmail.getText().toString().trim();
+        String enteredPassword = editTextPassword.getText().toString().trim();
+
+        buttonLogin.setEnabled(false);
+        buttonLogin.setText("Logging in...");
+
+        if (validateCredentials(enteredEmail, enteredPassword)) {
+            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+        } else {
+            loginAttempts++; // increase failed attempts
+            Toast.makeText(this, "Invalid email or password (" + loginAttempts + "/" + MAX_ATTEMPTS + ")", Toast.LENGTH_SHORT).show();
+
+            if (loginAttempts >= MAX_ATTEMPTS) {
+                Toast.makeText(this, "Too many attempts! Login disabled.", Toast.LENGTH_LONG).show();
+                buttonLogin.setEnabled(false); // disable button
+            } else {
+                buttonLogin.setEnabled(true);
+                buttonLogin.setText("Login");
+            }
+        }
+    }
+
     private void signInWithGoogle() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -122,24 +150,6 @@ public class LogInPage extends AppCompatActivity {
         } catch (ApiException e) {
             Log.e("GoogleSignIn", "Error code: " + e.getStatusCode(), e);
             Toast.makeText(this, "Google Sign-In Failed", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void attemptLogin() {
-        String enteredEmail = editTextEmail.getText().toString().trim();
-        String enteredPassword = editTextPassword.getText().toString().trim();
-
-        buttonLogin.setEnabled(false);
-        buttonLogin.setText("Logging in...");
-
-        if (validateCredentials(enteredEmail, enteredPassword)) {
-            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        } else {
-            Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-            buttonLogin.setEnabled(true);
-            buttonLogin.setText("Login");
         }
     }
 
