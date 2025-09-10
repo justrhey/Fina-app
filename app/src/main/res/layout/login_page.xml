@@ -155,17 +155,15 @@
 
             </LinearLayout>
 
-            <!-- Biometric Login Button -->
-            <Button
-                android:id="@+id/buttonBiometric"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Use Fingerprint"
-                android:textSize="16sp"
-                android:textColor="#4A90E2"
-                android:background="@android:drawable/btn_default"
-                android:drawableLeft="@android:drawable/ic_partial_secure"
-                android:drawablePadding="8dp" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btnGoogleSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+
 
         </LinearLayout>
 

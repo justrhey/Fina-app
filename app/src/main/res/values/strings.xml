@@ -13,5 +13,8 @@
     <string name="amount">Amount</string>
     <string name="sign_in">Sign In</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="google_client_id">918273977820-cko1spaafpgf4die9f022lttgs4t195t.apps.googleusercontent.com
+    </string>
+
 </resources>
 
