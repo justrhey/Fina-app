@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
+
+        <!-- Header Section -->
+
+        <!-- Login Form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="48dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- App Logo (using default drawable) -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/background"
+                android:padding="20dp"
+                android:src="@drawable/logo" />
+
+            <!-- App Name -->
+
+            <!-- Tagline -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Smart Finance Companion"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="24dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Email Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:drawableLeft="@android:drawable/sym_action_email"
+                android:drawablePadding="12dp" />
+
+            <!-- Password Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+                android:drawablePadding="12dp" />
+
+            <!-- Forgot Password -->
+            <TextView
+                android:id="@+id/textViewForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/forgot_password"
+                android:textSize="14sp"
+                android:textColor="#4A90E2"
+                android:padding="8dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/sign_in"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF9500"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Divider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="16dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#CCCCCC" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" or "
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginHorizontal="16dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#CCCCCC" />
+
+            </LinearLayout>
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btnGoogleSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+
+
+        </LinearLayout>
+
+        <!-- Sign Up Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/textViewSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="14sp"
+                android:textColor="#4A90E2"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2024 Fina • Secure • Simple • Smart"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>
