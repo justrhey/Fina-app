@@ -3,6 +3,7 @@ package com.example.fina.entity;
 public class Expense {
     private String description;
     private  double amount;
+    private double amounts;
 
     public Expense(String description, double amount){
         this.description = description;
