@@ -1,10 +1,10 @@
-# Fina-app 📊
+# Fina-app 
 
 Finance Tracking Android Application (Still in progress)
 
 ---
 
-## 🔍 Table of Contents
+## Table of Contents
 
 - [About](#about)  
 - [Tech Stack](#tech-stack)  
@@ -17,7 +17,7 @@ Finance Tracking Android Application (Still in progress)
 
 ---
 
-## 📝 About
+##  About
 
 Fina-app is an Android application for tracking personal finances. It helps users monitor income, expenses, and visualize financial data over time.  
 
